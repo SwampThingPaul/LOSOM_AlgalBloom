@@ -1,0 +1,132 @@
+---
+title: |
+  DRAFT: Evaluation of Algal bloom potential for the Caloosahatchee River Estuary
+type: Technical Report
+author:
+  - name: Paul Julian
+    affil: 1,2
+    email: pjulian@sccf.org
+affiliation:
+  - num: 1
+    address: |
+      Sanibel-Captiva Conservation Foundation, PO Box 839, Sanibel, FL 33957
+  - num: 2
+    address: |
+      Conservancy of Southwest Florida, 1495 Smith Preserve Way, Naples, FL 34102
+subdate: May 13, 2021
+github: https://github.com/SwampThingPaul/LOSOM_AlgalBloom/
+header-includes: |
+  \usepackage{hyperref}
+  \usepackage[utf8]{inputenc}
+  \usepackage{float}
+  \floatplacement{figure}{H}
+  \def\tightlist{}
+  \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+output: function(...) rticles:::pdf_document_format(NA,template="cust_temp.tex",keep_tex=TRUE, citation_package='natbib')
+editor_options: 
+  chunk_output_type: console
+---
+```{r, include=F}
+# output: rticles::tf_article
+knitr::opts_chunk$set(fig.pos = 'H')
+library(AnalystHelper)
+# library(flextable)
+library(kableExtra)
+library(magrittr)
+
+
+library(flextable)
+library(magrittr)
+```
+
+
+# Objective
+The draft Northern Estuaries Algal Bloom Risk Assessment performance measure for Lake Okeechobee System Operating Manual (LOSOM) proposes to evaluate changes in discharges from Lake Okeechobee to the Caloosahatchee River Estuary (CRE) to assess the risk of algal bloom development. The premise of this performance measure is that releasing freshwater with sufficient algal biomass to the estuaries during the summer (May/June - August)  favors freshwater algal blooms in the estuaries by transport of algal biomass, expansion of the freshwater habitat suitable for algal growth, and subsidizing available nutrients. This concept has been demonstrated for the St Lucie Estuary (Phlips et al 2020) but this has not been demonstrated for the CRE. Therefore, this preliminary evaluation will explore the potential for algal bloom transport from Lake Okeechobee to the CRE and the role of discharges on algal bloom formation at the CRE headwaters. 
+
+# Methods
+
+## Data Source
+
+Chlorophyll-a data were retrieved from the South Florida Water Management District (SFWMD) online database (DBHYDRO; [www.sfwmd.gov/dbhydro](www.sfwmd.gov/dbhydro)) for sites defined as Lake Okeechobee western littoral zone as defined by Walker (2020) and S-79 (Table \ref{tab:tab1}) for S-77 and S-79. Only positive discharge values were considered in this analysis, therefore discharge values reported less than zero were replaced with zero. Water quality data were screened based on laboratory qualifier codes, consistent with Florida Department of Environmental Protection's quality assurance rule (Florida Administrative Code 2008). Any datum associated with a fatal qualifier indicating a potential data quality problem was removed from the analysis. Additional considerations in the handling of analytical data were the accuracy and sensitivity of the laboratory method used. For purposes of data analysis and summary statistics, data reported as less than the method detection limit (MDL) were assigned one-half the MDL. 
+
+
+```{r,echo=F,results='asis'}
+set_flextable_defaults(fonts_ignore=TRUE)
+samp.sites=data.frame(DataType=c(rep("Water Quality",6),rep("Discharge",2)),
+           Site=c("S79","CES01","S77","PALMOUT","PLN2OUT","TREEOUT","S77","S79"),
+           Region=c(rep("S-79 (CRE)",2),
+                    rep("Littoral West (Lake Okeechobee)",4),
+                    'From Lake (DBKEY:15635)',"To Estuary (DBKEY: 00865)"))
+flextable_to_rmd(  
+samp.sites%>%
+  flextable()%>%
+  merge_v(1)%>%
+  fix_border_issues()%>%
+  valign(j=1,valign="top")%>%autofit()%>%
+  set_caption(caption="\\label{tab:tab1} Monitoring Locations used in this evaluation with regions defined.")
+)
+```
+
+## Data Analysis
+
+Daily discharge data were aggregated by month for each discharge location. Basin discharge was estimated by taking the difference from S77 and S79. If the difference between the estuary discharge (S79) and lake (S77) were less than zero then basin discharge was set to zero. Lake discharges to the estuary were determined based on the relative discharge volumes of S77 and S79. If S77 discharges were greater than S79 for any given month it was assumed that the discharge volume at S79 was from the lake (i.e. no basin flow), otherwise, the observed discharge volumes for S77 were characterized as lake water.  Monthly discharge volumes were compared between high (June – August) and low (September – May) algal bloom risk periods for S77 and S79 using the Kruskal-Wallis rank-sum test. The algal bloom risk periods were based on analyses by Walker (2020), where generally chlorophyll-a concentrations and therefore algal bloom potential are greatest during May through August period. The period was adjusted for the CRE as May is typically the driest month and discharges during this period do not reflect a high risk of algal transport to the estuary. 
+Monthly mean chlorophyll-a data were estimated for each region (i.e. CRE and Littoral West), for Lake Okeechobee Littoral West all sites were average together for any given month. Monthly mean chlorophyll-a concentrations were compared between regions using Kruskal-Wallis rank-sum test. Cross-correlation function estimation was used to evaluate potential lagged correlations between Lake Okeechobee (littoral west) and S-79 (CRE) chlorophyll concentrations where CRE chlorophyll values remained fixed and Lake Okeechobee chlorophyll values were lagged. Logistic regression was used to evaluate the potential of bloom formation relative to Lake discharges. Potential algal blooms at S79 were identified if monthly mean chlorophyll-a concentrations were greater than 20 $\mu$g L$^{-1}$.
+
+All plots were generated in base R and all tables were formatted using “flextable” R-package (Gohel 2021). All statistical operations were performed using R (Ver 4.0.4, R Foundation for Statistical Computing, Vienna Austria).  Unless otherwise stated, all statistical operations were performed using the base R library. The critical level of significance was set at $\alpha$ = 0.05.
+
+# Results
+
+Monthly discharge from the S77 and S79 was significantly different between high and low-risk bloom periods (S77: $\chi^{2}$=21.7, df=1, $\rho$<0.01; S79: $\chi^{2}$ 20.97, df=1, $\rho$<0.01). Generally, discharges from the S-77 during the high bloom risk period are lower than discharges observed during the high risk (Fig \ref{fig:fig1}). However, discharges from the S-79 are typically higher during the high bloom risk period relative to the low bloom risk period (Fig \ref{fig:fig2}). Additionally, monthly discharge volumes at S-79 have a strong seasonal signature with discharges beginning to increase in May to June and declining in September to October periods (Fig \ref{fig:fig2}). Meanwhile, the seasonality of discharges at S77 is much less apparent (Fig \ref{fig:fig2}).
+
+```{r, echo=FALSE, out.width='100%',fig.cap="\\label{fig:fig1} Comparison of monthly discharge volumes between bloom risk periods for S77 (Left) and S79 (right)."}
+knitr::include_graphics('C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod.png')
+```
+
+```{r, echo=FALSE, out.width='100%',fig.cap="\\label{fig:fig2} Monthly discharge volumes for S77 and S79 during the May 1999 to May 2021 period of record with locally estimated scatterplot smoothing (LOESS) trend and 95\\% confidence interval."}
+knitr::include_graphics('C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod_Qmonth.png')
+```
+
+Monthly mean chlorophyll-a concentrations were significantly greater for the Littoral West region relative to CRE ($\chi^{2}$ 100, df=1, $\rho$<0.01; Fig \ref{fig:fig3}). However, during the June to August, high bloom period chlorophyll-a concentrations are not significantly different between regions ($\chi^{2}$ 0.4, df=1, $\rho$=0.54; Fig \ref{fig:fig3}). However, the cross-correlation between monthly chlorophyll-a concentration observed at CRE and that of the Littoral West are relatively low with no correlations across the 15 month lag period (Fig \ref{fig:fig4}).  
+
+The logistic model to evaluate algal bloom potential at S-79 relative to lake discharges indicated a significant decrease in log-odds ratio for algal bloom (i.e. chlorophyll>20 $\mu$g L$^{-1}$) relative to lake discharge (Table \ref{tab:tab2} and Fig \ref{fig:fig5}). However, the model has a low degree of fit (McFadden’s R$^{2}$ 0.07), therefore any algal bloom mitigation strategy developed based on this analysis should be used with caution.
+
+```{r, echo=FALSE,out.width='100%',fig.cap="\\label{fig:fig3} Monthly mean chlorophyll-a concentration between regions for all months (left) and algal bloom period (right)."}
+knitr::include_graphics('C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chl_region.png')
+```
+
+```{r, echo=FALSE, fig.align='center', out.width='70%',fig.cap="\\label{fig:fig4}Cross-correlation function results comparing monthly mean chlorophyll-a concentration between CRE and lagged Littoral West. "}
+knitr::include_graphics('C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chla_CCF.png')
+```
+
+```{r,echo=F,results='asis'}
+mod=readRDS("C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Export/glm_C43.rds")
+
+flextable_to_rmd(
+flextable::as_flextable(mod)%>%
+  compose(i=2,j=1,value=as_paragraph("Lake Discharge"))%>%
+  add_footer_lines(value=c("McFadden's R\u00B2 = 0.07"))%>%
+  autofit()%>%
+  set_caption(caption="\\label{tab:tab2}Logistic Model Summary comparing algal bloom potental to lake discharges.")
+)
+
+```
+
+```{r, echo=FALSE, out.width='100%',fig.cap="\\label{fig:fig5} Algal bloom occurance at S-79 compared to lake discharges with fitted logistic model with 95\\% confidence interval."}
+knitr::include_graphics('C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/logisticmod_CREChla.png')
+```
+
+
+# References
+* Florida Administrative Code (2008) Chapter 62-160 Quality Assurance. 
+* Gohel D (2021) flextable: Functions for Tabular Reporting. CRAN R-Project
+* Phlips EJ, Badylak S, Nelson NG, Havens KE (2020) Hurricanes, El Niño and harmful algal blooms in two sub-tropical Florida estuaries: Direct and indirect impacts. Scientific Reports 10:1910. doi: 10.1038/s41598-020-58771-4
+* Walker W (2020) DRAFT Chlorophyll-a Models for LOSOM Applications. US Department of the Interior
+
+\newpage
+# Appendix A 
+
+Add R Code
+
+# Appendix B 
+
+Add Sample location map

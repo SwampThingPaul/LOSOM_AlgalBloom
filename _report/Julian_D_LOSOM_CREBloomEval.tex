@@ -1,0 +1,410 @@
+% interactcadsample.tex
+% v1.03 - April 2017
+
+\documentclass[]{interact}
+
+\usepackage{epstopdf}% To incorporate .eps illustrations using PDFLaTeX, etc.
+\usepackage{subfigure}% Support for small, `sub' figures and tables
+%\usepackage[nolists,tablesfirst]{endfloat}% To `separate' figures and tables from text if required
+
+\usepackage{natbib}% Citation support using natbib.sty
+\bibpunct[, ]{(}{)}{;}{a}{}{,}% Citation support using natbib.sty
+\renewcommand\bibfont{\fontsize{10}{12}\selectfont}% Bibliography support using natbib.sty
+
+\theoremstyle{plain}% Theorem-like structures provided by amsthm.sty
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{notation}{Notation}
+
+% see https://stackoverflow.com/a/47122900
+  
+  % Pandoc citation processing
+
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\floatplacement{figure}{H}
+\def\tightlist{}
+\newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{hhline}
+\usepackage{hyperref}
+
+\begin{document}
+
+\articletype{Technical Report}
+
+\title{DRAFT: Evaluation of Algal bloom potential for the Caloosahatchee
+River Estuary}
+
+
+\author{\name{Paul Julian$^{1,2}$}
+\affil{$^{1}$Sanibel-Captiva Conservation Foundation, PO Box 839,
+Sanibel, FL 33957\\ $^{2}$Conservancy of Southwest Florida, 1495 Smith
+Preserve Way, Naples, FL 34102}
+}
+
+\thanks{CONTACT Paul
+Julian. Email: \href{mailto:pjulian@sccf.org}{\nolinkurl{pjulian@sccf.org}}}
+
+\maketitle
+
+
+
+\begin{github}
+\url{https://github.com/SwampThingPaul/LOSOM_AlgalBloom/}
+\end{github}
+
+\hypertarget{objective}{%
+\section{Objective}\label{objective}}
+
+The draft Northern Estuaries Algal Bloom Risk Assessment performance
+measure for Lake Okeechobee System Operating Manual (LOSOM) proposes to
+evaluate changes in discharges from Lake Okeechobee to the
+Caloosahatchee River Estuary (CRE) to assess the risk of algal bloom
+development. The premise of this performance measure is that releasing
+freshwater with sufficient algal biomass to the estuaries during the
+summer (May/June - August) favors freshwater algal blooms in the
+estuaries by transport of algal biomass, expansion of the freshwater
+habitat suitable for algal growth, and subsidizing available nutrients.
+This concept has been demonstrated for the St Lucie Estuary (Phlips et
+al 2020) but this has not been demonstrated for the CRE. Therefore, this
+preliminary evaluation will explore the potential for algal bloom
+transport from Lake Okeechobee to the CRE and the role of discharges on
+algal bloom formation at the CRE headwaters.
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+\hypertarget{data-source}{%
+\subsection{Data Source}\label{data-source}}
+
+Chlorophyll-a data were retrieved from the South Florida Water
+Management District (SFWMD) online database (DBHYDRO;
+\url{www.sfwmd.gov/dbhydro}) for sites defined as Lake Okeechobee
+western littoral zone as defined by Walker (2020) and S-79 (Table
+\ref{tab:tab1}) for S-77 and S-79. Only positive discharge values were
+considered in this analysis, therefore discharge values reported less
+than zero were replaced with zero. Water quality data were screened
+based on laboratory qualifier codes, consistent with Florida Department
+of Environmental Protection's quality assurance rule (Florida
+Administrative Code 2008). Any datum associated with a fatal qualifier
+indicating a potential data quality problem was removed from the
+analysis. Additional considerations in the handling of analytical data
+were the accuracy and sensitivity of the laboratory method used. For
+purposes of data analysis and summary statistics, data reported as less
+than the method detection limit (MDL) were assigned one-half the MDL.
+
+\providecommand{\docline}[3]{\noalign{\global\setlength{\arrayrulewidth}{#1}}\arrayrulecolor[HTML]{#2}\cline{#3}}
+
+\setlength{\tabcolsep}{2pt}
+
+\renewcommand*{\arraystretch}{1.5}
+
+\begin{longtable}[c]{|p{1.21in}|p{1.02in}|p{2.52in}}
+
+\caption{\label{tab:tab1} Monitoring Locations used in this evaluation with regions defined.}\\
+
+\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{DataType}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Site}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Region}}} \\
+
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-3}
+
+\endfirsthead
+
+\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{DataType}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Site}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Region}}} \\
+
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-3}\endhead
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{S79}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{S-79 (CRE)}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{CES01}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{S-79 (CRE)}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{S77}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Littoral West (Lake Okeechobee)}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{PALMOUT}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Littoral West (Lake Okeechobee)}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{PLN2OUT}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Littoral West (Lake Okeechobee)}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{\multirow[t]{-6}{*}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Water Quality}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{TREEOUT}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Littoral West (Lake Okeechobee)}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{S77}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{From Lake (DBKEY:15635)}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.21in+0\tabcolsep+0\arrayrulewidth}}{\multirow[t]{-2}{*}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Discharge}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.02in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{S79}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 2.52in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{To Estuary (DBKEY: 00865)}}} \\
+
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-3}
+
+\end{longtable}
+
+\hypertarget{data-analysis}{%
+\subsection{Data Analysis}\label{data-analysis}}
+
+Daily discharge data were aggregated by month for each discharge
+location. Basin discharge was estimated by taking the difference from
+S77 and S79. If the difference between the estuary discharge (S79) and
+lake (S77) were less than zero then basin discharge was set to zero.
+Lake discharges to the estuary were determined based on the relative
+discharge volumes of S77 and S79. If S77 discharges were greater than
+S79 for any given month it was assumed that the discharge volume at S79
+was from the lake (i.e.~no basin flow), otherwise, the observed
+discharge volumes for S77 were characterized as lake water. Monthly
+discharge volumes were compared between high (June -- August) and low
+(September -- May) algal bloom risk periods for S77 and S79 using the
+Kruskal-Wallis rank-sum test. The algal bloom risk periods were based on
+analyses by Walker (2020), where generally chlorophyll-a concentrations
+and therefore algal bloom potential are greatest during May through
+August period. The period was adjusted for the CRE as May is typically
+the driest month and discharges during this period do not reflect a high
+risk of algal transport to the estuary. Monthly mean chlorophyll-a data
+were estimated for each region (i.e.~CRE and Littoral West), for Lake
+Okeechobee Littoral West all sites were average together for any given
+month. Monthly mean chlorophyll-a concentrations were compared between
+regions using Kruskal-Wallis rank-sum test. Cross-correlation function
+estimation was used to evaluate potential lagged correlations between
+Lake Okeechobee (littoral west) and S-79 (CRE) chlorophyll
+concentrations where CRE chlorophyll values remained fixed and Lake
+Okeechobee chlorophyll values were lagged. Logistic regression was used
+to evaluate the potential of bloom formation relative to Lake
+discharges. Potential algal blooms at S79 were identified if monthly
+mean chlorophyll-a concentrations were greater than 20 \(\mu\)g
+L\(^{-1}\).
+
+All plots were generated in base R and all tables were formatted using
+``flextable'' R-package (Gohel 2021). All statistical operations were
+performed using R (Ver 4.0.4, R Foundation for Statistical Computing,
+Vienna Austria). Unless otherwise stated, all statistical operations
+were performed using the base R library. The critical level of
+significance was set at \(\alpha\) = 0.05.
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+Monthly discharge from the S77 and S79 was significantly different
+between high and low-risk bloom periods (S77: \(\chi^{2}\)=21.7, df=1,
+\(\rho\)\textless0.01; S79: \(\chi^{2}\) 20.97, df=1,
+\(\rho\)\textless0.01). Generally, discharges from the S-77 during the
+high bloom risk period are lower than discharges observed during the
+high risk (Fig \ref{fig:fig1}). However, discharges from the S-79 are
+typically higher during the high bloom risk period relative to the low
+bloom risk period (Fig \ref{fig:fig2}). Additionally, monthly discharge
+volumes at S-79 have a strong seasonal signature with discharges
+beginning to increase in May to June and declining in September to
+October periods (Fig \ref{fig:fig2}). Meanwhile, the seasonality of
+discharges at S77 is much less apparent (Fig \ref{fig:fig2}).
+
+\begin{figure}[H]
+\includegraphics[width=1\linewidth]{C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod} \caption{\label{fig:fig1} Comparison of monthly discharge volumes between bloom risk periods for S77 (Left) and S79 (right).}\label{fig:unnamed-chunk-3}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=1\linewidth]{C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod_Qmonth} \caption{\label{fig:fig2} Monthly discharge volumes for S77 and S79 during the May 1999 to May 2021 period of record with locally estimated scatterplot smoothing (LOESS) trend and 95\% confidence interval.}\label{fig:unnamed-chunk-4}
+\end{figure}
+
+Monthly mean chlorophyll-a concentrations were significantly greater for
+the Littoral West region relative to CRE (\(\chi^{2}\) 100, df=1,
+\(\rho\)\textless0.01; Fig \ref{fig:fig3}). However, during the June to
+August, high bloom period chlorophyll-a concentrations are not
+significantly different between regions (\(\chi^{2}\) 0.4, df=1,
+\(\rho\)=0.54; Fig \ref{fig:fig3}). However, the cross-correlation
+between monthly chlorophyll-a concentration observed at CRE and that of
+the Littoral West are relatively low with no correlations across the 15
+month lag period (Fig \ref{fig:fig4}).
+
+The logistic model to evaluate algal bloom potential at S-79 relative to
+lake discharges indicated a significant decrease in log-odds ratio for
+algal bloom (i.e.~chlorophyll\textgreater20 \(\mu\)g L\(^{-1}\))
+relative to lake discharge (Table \ref{tab:tab2} and Fig
+\ref{fig:fig5}). However, the model has a low degree of fit (McFadden's
+R\(^{2}\) 0.07), therefore any algal bloom mitigation strategy developed
+based on this analysis should be used with caution.
+
+\begin{figure}[H]
+\includegraphics[width=1\linewidth]{C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chl_region} \caption{\label{fig:fig3} Monthly mean chlorophyll-a concentration between regions for all months (left) and algal bloom period (right).}\label{fig:unnamed-chunk-5}
+\end{figure}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chla_CCF} 
+
+}
+
+\caption{\label{fig:fig4}Cross-correlation function results comparing monthly mean chlorophyll-a concentration between CRE and lagged Littoral West. }\label{fig:unnamed-chunk-6}
+\end{figure}
+
+\providecommand{\docline}[3]{\noalign{\global\setlength{\arrayrulewidth}{#1}}\arrayrulecolor[HTML]{#2}\cline{#3}}
+
+\setlength{\tabcolsep}{2pt}
+
+\renewcommand*{\arraystretch}{1.5}
+
+\begin{longtable}[c]{|p{1.35in}|p{0.88in}|p{1.29in}|p{0.77in}|p{0.78in}|p{0.75in}}
+
+\caption{\label{tab:tab2}Logistic Model Summary comparing algal bloom potental to lake discharges.}\\
+
+\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.35in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Estimate}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Standard Error}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.77in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{z value}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Pr(>|z|)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Signif.}}} \\
+
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-6}
+
+\endfirsthead
+
+\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.35in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Estimate}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Standard Error}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.77in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{z value}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Pr(>|z|)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Signif.}}} \\
+
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-6}\endhead
+
+
+
+\multicolumn{6}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedleft}p{\dimexpr 5.82in+10\tabcolsep+5\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\textit{Signif. codes: 0 <= '***' < 0.001 < '**' < 0.01 < '*' < 0.05 < '.' < 0.1 < '' < 1}}}} \\
+
+
+
+
+
+\multicolumn{6}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.82in+10\tabcolsep+5\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{ }}} \\
+
+
+
+
+
+\multicolumn{6}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.82in+10\tabcolsep+5\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{(Dispersion parameter for binomial family taken to be 1)}}} \\
+
+
+
+
+
+\multicolumn{6}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.82in+10\tabcolsep+5\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Null deviance: 183.1 on 201 degrees of freedom}}} \\
+
+
+
+
+
+\multicolumn{6}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.82in+10\tabcolsep+5\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Residual deviance: 171 on 200 degrees of freedom}}} \\
+
+
+
+
+
+\multicolumn{6}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.82in+10\tabcolsep+5\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{  (62 observations deleted due to missingness)\linebreak }}} \\
+
+
+
+
+
+\multicolumn{6}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.82in+10\tabcolsep+5\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{McFadden's R² = 0.07}}} \\
+
+\endfoot
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.35in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{(Intercept)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-1.038}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{0.246}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.77in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-4.216}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{0.0000}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{***}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.35in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Lake Discharge}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-12.165}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{4.860}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.77in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-2.503}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{0.0123}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{*}}} \\
+
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-6}
+
+\end{longtable}
+
+\begin{figure}[H]
+\includegraphics[width=1\linewidth]{C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/logisticmod_CREChla} \caption{\label{fig:fig5} Algal bloom occurance at S-79 compared to lake discharges with fitted logistic model with 95\% confidence interval.}\label{fig:unnamed-chunk-8}
+\end{figure}
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begin{itemize}
+\tightlist
+\item
+  Florida Administrative Code (2008) Chapter 62-160 Quality Assurance.
+\item
+  Gohel D (2021) flextable: Functions for Tabular Reporting. CRAN
+  R-Project
+\item
+  Phlips EJ, Badylak S, Nelson NG, Havens KE (2020) Hurricanes, El Niño
+  and harmful algal blooms in two sub-tropical Florida estuaries: Direct
+  and indirect impacts. Scientific Reports 10:1910. doi:
+  10.1038/s41598-020-58771-4
+\item
+  Walker W (2020) DRAFT Chlorophyll-a Models for LOSOM Applications. US
+  Department of the Interior
+\end{itemize}
+
+\newpage
+
+\hypertarget{appendix-a}{%
+\section{Appendix A}\label{appendix-a}}
+
+Add R Code
+
+\hypertarget{appendix-b}{%
+\section{Appendix B}\label{appendix-b}}
+
+Add Sample location map
+
+
+
+
+
+\end{document}
