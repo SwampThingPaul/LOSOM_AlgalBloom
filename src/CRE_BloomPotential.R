@@ -365,7 +365,7 @@ flextable::as_flextable(mod)%>%
   add_footer_lines(value=c("McFadden's R\u00B2 = 0.07"))
 #)
 # saveRDS(mod,paste0(export.path,"glm_C43.rds"))
-# mod=redRDS(paste0(export.path,"glm_C43.rds"))
+# mod=readRDS(paste0(export.path,"glm_C43.rds"))
 
 
 data.frame(DataType=c(rep("Water Quality",6),rep("Discharge",2)),

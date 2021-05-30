@@ -6,3 +6,4 @@
 
 *.Rproj
 _report/*.docx
+README.Rmd

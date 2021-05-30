@@ -42,6 +42,7 @@
 \def\fignumfont{\fontsize{8}{10}\selectfont\bfseries}%
 \def\historyfont{\fontsize{9}{10}\selectfont\leftskip1pc\rightskip5pc plus1fill}%
 \def\keywordfont{\fontsize{9}{10}\selectfont\leftskip1pc\rightskip5pc plus1fill}%
+\def\DOIfont{\fontsize{9}{10}\selectfont\leftskip1pc\rightskip5pc plus1fill}%
 \def\githubfont{\fontsize{9}{10}\selectfont\leftskip1pc\rightskip5pc plus1fill}%
 \def\receivedfont{\fontsize{9}{12}\selectfont\leftskip1pc\rightskip5pc}%
 \def\sectionfont{\fontsize{11}{13}\selectfont\bfseries\raggedright\boldmath}%
@@ -291,6 +292,13 @@
   \abstractfont\noindent{\bfseries \abbreviationsname: }\ignorespaces%
 }{%
         \par\addvspace{13pt plus2pt minus1pt}
+  \@endparenv}
+%
+\newenvironment{DOI}{%
+        \par\addvspace{13pt plus2pt minus1pt}
+  \DOIfont\noindent{\bfseries \DOIname\\}\ignorespaces%
+}{%
+ \par\addvspace{13pt plus2pt minus1pt}
   \@endparenv}
 %
 \newenvironment{github}{%
@@ -724,6 +732,7 @@
 \renewcommand\abstractname{Summary}
 \newcommand\keywordsname{Keywords}
 \newcommand\githubname{Open Source Information}
+\newcommand\DOIname{DOI}
 %
 \setlength\parskip{0\p@}
 \setlength\columnsep{12\p@}
