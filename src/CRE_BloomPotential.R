@@ -17,6 +17,16 @@ library(AnalystHelper);
 library(plyr)
 library(reshape2)
 library(EnvStats)
+library(zoo)
+
+# GIS libraries 
+library(rgdal)
+library(rgeos)
+library(raster)
+library(ceramic)
+
+library(flextable)
+library(magrittr)
 
 ## Paths
 wd="C:/Julian_LaCie/_Github/LOSOM_AlgalBloom"
@@ -27,6 +37,49 @@ plot.path=paths[1]
 export.path=paths[2]
 data.path=paths[3]
 
+GIS.path="C:/Julian_LaCie/_GISData"
+
+# Helper variables
+nad83.pro=CRS(SRS_string ="EPSG:4269")
+utm17=CRS(SRS_string ="EPSG:26917")
+wgs84=CRS(SRS_string = "EPSG:4326")
+
+# GIS ---------------------------------------------------------------------
+source("./src/archive/cermanic_key.R")
+
+wmd.mon=spTransform(readOGR(paste0(GIS.path,"/SFWMD_Monitoring_20210119"),"DBHYDRO_SITE_STATION"),utm17)
+canals=spTransform(readOGR(paste0(GIS.path,"/SFER_GIS_Geodatabase.gdb"),"SFWMD_Canals"),utm17)
+sites=subset(wmd.mon,
+       ACTIVITY_S=="Surface Water Grab"&
+       STATION%in%c("S79","CES01","S77","PALMOUT","PLN2OUT","TREEOUT"))
+plot(sites)
+
+roi=extent(spTransform(gBuffer(sites,width=10000),wgs84))
+im <- cc_location(roi,zoom=11)
+im2=projectRaster(im,crs=wkt(utm17))
+im2=setValues(im2,scales::rescale(values(im2), c(0,255)))
+
+# png(filename=paste0(plot.path,"MonitoringMap.png"),width=6.5,height=3.5,units="in",res=200,type="windows",bg="white")
+par(family="serif",mar=c(0.5,0.5,0.5,0.5),oma=c(0.1,0.1,0.1,0.1));
+layout(matrix(1:2,2,1,byrow=F),heights=c(1,0.25))
+bbox.poly=as(raster::extent(im2),"SpatialPolygons")#makes the polygon
+plotRGB(im2)
+plot(crop(canals,gBuffer(bbox.poly,width=-750)),add=T,col="lightblue",lwd=1.5,xpd=F)
+plot(subset(sites,SITE=="S79"),pch=21,bg="grey",cex=1.25,add=T)
+plot(subset(sites,SITE!="S79"),pch=21,bg="indianred1",cex=1.25,add=T)
+text(subset(sites,STATION=="CES01"),"STATION",halo=T,hc="black",col="white",pos=4,font=2,cex=0.8)
+text(subset(sites,STATION!="CES01"),"STATION",halo=T,hc="black",col="white",pos=2,font=2,cex=0.8)
+mapmisc::scaleBar(utm17,"bottomright",outer=T,bty="n",cex=1,seg.len=4,col="white",inset=c(0.01,0.06));
+
+plot(0:1,0:1,ann=F,axes=F,type="n")
+legend(0.5,0.5,legend=c("Caloosahatchee Estuary/S79","Lake Okeechobee - Littoral West","Canal"),
+       pch=c(21,21,NA),
+       lty=c(NA,NA,1),
+       lwd=c(0.5,0.5,2),
+       pt.bg=c("grey","indianred1",NA),
+       col=c("black","black","lightblue"),
+       pt.cex=2,ncol=1,cex=1,bty="n",y.intersp=1,x.intersp=0.75,xpd=NA,xjust=0.5,yjust=0.5)
+dev.off()
 # -------------------------------------------------------------------------
 dates=date.fun(c("1999-05-01","2021-04-30"))
 
@@ -240,7 +293,7 @@ plot(CRE~LitWest,Chla.region.xtab)
 Chla.region.xtab=merge(Chla.region.xtab,q.cre.dat.xtab.mon,"monCY")
 # Chla.region.xtab=subset(Chla.region.xtab,as.numeric(format(monCY,"%m"))%in%c(6:8))
 
-library(zoo)
+
 layout(matrix(1:4,1,4,byrow=T))
 for(h in 0:3){
   tmp.dat=data.frame(CRE.chla=lag(as.zoo(Chla.region.xtab$CRE),0,na.pad=T),
@@ -316,7 +369,7 @@ mod=glm(CRE~Lake,bloom.region.xtab2,family="binomial")
 summary(mod)
 confint(mod)
 confint.default(mod);# using Standard Errors
-gtsummary::as_flex_table(gtsummary::tbl_regression(mod))
+# gtsummary::as_flex_table(gtsummary::tbl_regression(mod))
 
 ylim.val=c(0,1);by.y=0.2;ymaj=seq(ylim.val[1],ylim.val[2],by.y);ymin=seq(ylim.val[1],ylim.val[2],by.y/2)
 xlim.val=c(0,0.6);by.x=0.2;xmaj=seq(xlim.val[1],xlim.val[2],by.x);xmin=seq(xlim.val[1],xlim.val[2],by.x/2)
@@ -328,9 +381,12 @@ abline(h=ymaj,v=xmaj,lty=3,col="grey")
 with(bloom.region.xtab2,points(Lake,CRE,pch=21,bg=adjustcolor("grey",0.5),col=adjustcolor("black",0.5),lwd=0.01))
 
 x.val=seq(min(bloom.region.xtab2$Lake,na.rm=T),max(bloom.region.xtab2$Lake,na.rm=T),length.out=200)
-mod.pred=predict(mod,data.frame(Lake=x.val),interval="confidence")
-shaded.range(x.val,exp(mod.pred[,2]),exp(mod.pred[,3]),bg="indianred1",lty=0)
-lines(x.val,exp(mod.pred[,1]),col=adjustcolor("indianred1",0.5),lwd=2)
+mod.pred=predict(mod,data.frame(Lake=x.val), type = "link", se.fit = TRUE)
+upr=mod$family$linkinv(mod.pred$fit+(qnorm(0.975)*mod.pred$se.fit))
+lwr=mod$family$linkinv(mod.pred$fit-(qnorm(0.975)*mod.pred$se.fit))
+fit=mod$family$linkinv(mod.pred$fit)
+shaded.range(x.val,lwr,upr,bg="indianred1",lty=0)
+lines(x.val,fit,col=adjustcolor("indianred1",0.5),lwd=2)
 # lines(x.val,exp(mod.pred[,2]),lty=2)
 # lines(x.val,exp(mod.pred[,3]),lty=2)
 axis_fun(1,xmaj,xmin,format(xmaj),line=-0.5)
@@ -344,12 +400,42 @@ plot(1:length(rstandard(mod)),rstandard(mod))
 plot(mod,which=4,id.n=5);#identify the top five largest values
 
 # McFadden's r2
-1-logLik(mod)[1]/logLik(glm(CRE~1,bloom.region.xtab2,family="binomial"))[1]
+mcR2=1-logLik(mod)[1]/logLik(glm(CRE~1,bloom.region.xtab2,family="binomial"))[1]
+mcR2
 # pscl::pR2(mod)
 
 #classification rate
 prop.table(table(bloom.region.xtab2$CRE,predict(mod,data.frame(Lake=bloom.region.xtab2$Lake),type="response")>0.5))
 # 83% true positives (based on all data)
+
+data_t <- broom::tidy(mod)
+data_g <- broom::glance(mod)
+sum_obj <- summary(mod)
+
+data_t$p.value=with(data_t,ifelse(p.value<0.01,"<0.01",ifelse(p.value<0.05,"<0.05",format(round(p.value,2),nsmall=2))))
+
+flextable(data_t, col_keys = c("term", "estimate", "std.error", "statistic", "p.value"))%>%
+  colformat_double(j = c("estimate", "std.error", "statistic"), digits = 3)%>%
+  # colformat_double(j = c("p.value"), digits = 3)%>%
+  set_header_labels(term = "", estimate = "Estimate",
+                    std.error = "Standard Error", statistic = "z-value",
+                    p.value = "p-value" )%>%
+  add_footer_lines(values = c(
+    paste("(Dispersion parameter for ", mod$family$family, " family taken to be ", format(sum_obj$dispersion), ")", sep = ""),
+    sprintf("Null deviance: %s on %s degrees of freedom", formatC(sum_obj$null.deviance), formatC(sum_obj$df.null)),
+    sprintf("Residual deviance: %s on %s degrees of freedom", formatC(sum_obj$deviance), formatC(sum_obj$df.residual)),
+    sprintf("McFadden's Pseudo R\u00B2: %s",format(round(mcR2,2),nsmall=2))
+    # ,{
+    #   if (nzchar(mess <- naprint(sum_obj$na.action)))
+    #     paste("  (", mess, ")\n", sep = "")
+    #   else character(0)
+    # }
+  ))%>%
+  align(i = 1, align = "right", part = "footer")%>%
+  italic(i = 1, italic = TRUE, part = "footer")%>%
+  hrule(rule = "auto")%>%
+  autofit(part = c("header", "body"))
+
 
 
 library(gtsummary)

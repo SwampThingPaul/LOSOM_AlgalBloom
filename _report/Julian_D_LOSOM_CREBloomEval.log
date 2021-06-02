@@ -1,0 +1,1082 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.6.2)  2 JUN 2021 12:53
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Julian_D_LOSOM_CREBloomEval.tex
+(./Julian_D_LOSOM_CREBloomEval.tex
+LaTeX2e <2021-06-01> pre-release-0 (develop 2021-6-2 branch)
+L3 programming layer <2021-06-01> (./interact.cls
+Document Class: interact 2016/10/17 v1.03 Interact LaTeX document class
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article
+.cls
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size11.
+clo
+File: size11.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsm
+ath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+For additional information on amsmath, use the `?' option.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amst
+ext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsg
+en.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen139
+))
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsb
+sy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amso
+pn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count190
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count191
+\leftroot@=\count192
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count193
+\DOTSCASE@=\count194
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count195
+\c@MaxMatrixCols=\count196
+\dotsspace@=\muskip16
+\c@parentequation=\count197
+\dspbrk@lvl=\count198
+\tag@help=\toks17
+\row@=\count199
+\column@=\count266
+\maxfields@=\count267
+\andhelp@=\toks18
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/ams
+symb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/ams
+fonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amscls/amsth
+m.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip52
+\thm@postskip=\skip53
+\thm@headsep=\skip54
+\dth@everypar=\toks26
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/boo
+ktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen148
+\lightrulewidth=\dimen149
+\cmidrulewidth=\dimen150
+\belowrulesep=\dimen151
+\belowbottomsep=\dimen152
+\aboverulesep=\dimen153
+\abovetopsep=\dimen154
+\cmidrulesep=\dimen155
+\cmidrulekern=\dimen156
+\defaultaddspace=\dimen157
+\@cmidla=\count268
+\@cmidlb=\count269
+\@aboverulesep=\dimen158
+\@belowrulesep=\dimen159
+\@thisruleclass=\count270
+\@lastruleclass=\count271
+\@thisrulewidth=\dimen160
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/eps
+fig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/gra
+phicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/key
+val.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/gra
+phics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/tri
+g.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg
+/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def
+/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
+)
+\epsfxsize=\dimen163
+\epsfysize=\dimen164
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/rot
+ating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.
+sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count272
+\rotFPtop=\skip55
+\rotFPbot=\skip56
+\rot@float@box=\box52
+\rot@mess@toks=\toks28
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geo
+metry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvt
+ex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifte
+x.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count273
+\Gm@cntv=\count274
+\c@Gm@tempcnt=\count275
+\Gm@bindingoffset=\dimen165
+\Gm@wd@mp=\dimen166
+\Gm@odd@mp=\dimen167
+\Gm@even@mp=\dimen168
+\Gm@layoutwidth=\dimen169
+\Gm@layoutheight=\dimen170
+\Gm@layouthoffset=\dimen171
+\Gm@layoutvoffset=\dimen172
+\Gm@dimlist=\toks29
+)
+\c@mv@upright=\count276
+\c@mv@boldupright=\count277
+LaTeX Font Info:    Overwriting symbol font `letters' in version `upright'
+(Font)                  OML/cmm/m/it --> OML/eur/m/n on input line 165.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `boldupright'
+(Font)                  OML/cmm/m/it --> OML/eur/b/n on input line 166.
+\figheight=\dimen173
+\figwidth=\dimen174
+\tabledim=\dimen175
+\LabelSep=\dimen176
+\TopSep=\skip57
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg
+/epstopdf.sty
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/
+infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/grfext/grfex
+t.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefineke
+ys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kv
+options.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/lt
+xcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvsetkeys/
+kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds
+/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg
+/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/
+epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/subfigure/su
+bfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
+\subfigcaptopadj=\dimen177
+\subfigbottomskip=\skip60
+\subfigcapmargin=\dimen178
+\subfiglabelskip=\skip61
+\c@subfigure=\count278
+\c@lofdepth=\count279
+\c@subtable=\count280
+\c@lotdepth=\count281
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/subfigure/su
+bfigure.cfg)
+\subfig@top=\skip62
+\subfig@bottom=\skip63
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbi
+b.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip64
+\bibsep=\skip65
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count282
+)
+\c@theorem=\count283
+\c@remark=\count284
+\c@notation=\count285
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/col
+or.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg
+/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fan
+cyvrb.sty
+Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count286
+\FV@InFile=\read2
+\FV@TabBox=\box53
+\c@FancyVerbLine=\count287
+\FV@StepNumber=\count288
+\FV@OutFile=\write3
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/frame
+d.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip66
+\fb@frw=\dimen179
+\fb@frh=\dimen180
+\FrameRule=\dimen181
+\FrameSep=\dimen182
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyp
+erref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/
+pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hyco
+lor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/letltxmacro/
+letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxh
+ook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen183
+\Hy@linkcounter=\count289
+\Hy@pagecounter=\count290
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1
+enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyp
+erref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/in
+tcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/e
+texcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count291
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pue
+nc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count292
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen184
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bit
+set.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc
+/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count293
+\Field@Width=\dimen185
+\Fld@charsize=\dimen186
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegsh
+i-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count294
+\c@Item=\count295
+\c@Hfootnote=\count296
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpd
+ftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atverye
+nd-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count297
+\c@bookmark@seq@number=\count298
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfileche
+ck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecoun
+ter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip67
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inputen
+c.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks30
+\inpenc@posthook=\toks31
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.
+sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count299
+\float@exts=\toks32
+\float@box=\box54
+\@float@everytoks=\toks33
+\@floatcapt=\box55
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longta
+ble.sty
+Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
+\LTleft=\skip68
+\LTright=\skip69
+\LTpre=\skip70
+\LTpost=\skip71
+\LTchunksize=\count300
+\LTcapwidth=\dimen187
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@gbox=\box60
+\LT@cols=\count301
+\LT@rows=\count302
+\c@LT@tables=\count303
+\c@LT@chunks=\count304
+\LT@p@ftn=\toks34
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.
+sty
+Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+\col@sep=\dimen188
+\ar@mcellbox=\box61
+\extrarowheight=\dimen189
+\NC@list=\toks35
+\extratabsurround=\skip72
+\backup@length=\skip73
+\ar@cellbox=\box62
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/mul
+tirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip74
+\multirow@cntb=\count305
+\multirow@dima=\skip75
+\bigstrutjot=\dimen190
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrap
+fig.sty
+\wrapoverhang=\dimen191
+\WF@size=\dimen192
+\c@WF@wrappedlines=\count306
+\WF@box=\box63
+\WF@everypar=\toks36
+Package: wrapfig 2003/01/31  v 3.6
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/col
+ortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks37
+\minrowclearance=\skip76
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pd
+flscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lsc
+ape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tabu/tabu.st
+y
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/var
+width.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box64
+\sift@deathcycles=\count307
+\@vwid@loff=\dimen193
+\@vwid@roff=\dimen194
+)
+\c@taburow=\count308
+\tabu@nbcols=\count309
+\tabu@cnt=\count310
+\tabu@Xcol=\count311
+\tabu@alloc=\count312
+\tabu@nested=\count313
+\tabu@target=\dimen195
+\tabu@spreadtarget=\dimen196
+\tabu@naturalX=\dimen197
+\tabucolX=\dimen198
+\tabu@Xsum=\dimen199
+\extrarowdepth=\dimen256
+\abovetabulinesep=\dimen257
+\belowtabulinesep=\dimen258
+\tabustrutrule=\dimen259
+\tabu@thebody=\toks38
+\tabu@footnotes=\toks39
+\tabu@box=\box65
+\tabu@arstrutbox=\box66
+\tabu@hleads=\box67
+\tabu@vleads=\box68
+\tabu@cellskip=\skip77
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttab
+le/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box69
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttab
+lex/threeparttablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/envi
+ron.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/trimspaces/t
+rimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip78
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.
+sty
+\UL@box=\box70
+\UL@hyphenbox=\box71
+\UL@skip=\skip79
+\UL@hook=\toks40
+\UL@height=\dimen260
+\UL@pe=\count314
+\UL@pixel=\dimen261
+\ULC@box=\box72
+Package: ulem 2019/11/18
+\ULdepth=\dimen262
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/mak
+ecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen263
+\c@nlinenum=\count315
+\TeXr@lab=\toks41
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolo
+r.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg
+/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/multic
+ol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count316
+\mult@box=\box73
+\multicol@leftmargin=\dimen264
+\c@unbalance=\count317
+\c@collectmore=\count318
+\doublecol@number=\count319
+\multicoltolerance=\count320
+\multicolpretolerance=\count321
+\full@width=\dimen265
+\page@free=\dimen266
+\premulticols=\dimen267
+\postmulticols=\dimen268
+\multicolsep=\skip80
+\multicolbaselineskip=\skip81
+\partial@page=\box74
+\last@line=\box75
+\maxbalancingoverflow=\dimen269
+\mult@rightbox=\box76
+\mult@grightbox=\box77
+\mult@gfirstbox=\box78
+\mult@firstbox=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\c@minrows=\count322
+\c@columnbadness=\count323
+\c@finalcolumnbadness=\count324
+\last@try=\dimen270
+\multicolovershoot=\dimen271
+\multicolundershoot=\dimen272
+\mult@nat@firstbox=\box117
+\colbreak@box=\box118
+\mc@col@check@num=\count325
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/hhline
+.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3
+backend-pdftex.def
+File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count326
+\l__pdf_internal_box=\box119
+) (./Julian_D_LOSOM_CREBloomEval.aux)
+\openout1 = `Julian_D_LOSOM_CREBloomEval.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(94.75394pt, 408.0pt, 94.75394pt)
+* v-part:(T,H,B)=(78.01874pt, 650.0pt, 117.0281pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=408.0pt
+* \textheight=650.0pt
+* \oddsidemargin=22.48395pt
+* \evensidemargin=22.48395pt
+* \topmargin=-31.25125pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=12.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 97.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nam
+eref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/ref
+count.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlest
+ring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count327
+)
+LaTeX Info: Redefining \ref on input line 97.
+LaTeX Info: Redefining \pageref on input line 97.
+LaTeX Info: Redefining \nameref on input line 97.
+(./Julian_D_LOSOM_CREBloomEval.out) (./Julian_D_LOSOM_CREBloomEval.out)
+\@outlinefile=\write4
+\openout4 = `Julian_D_LOSOM_CREBloomEval.out'.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 115.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
+(Font)              size <12> substituted on input line 115.
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 115.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 115.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 115.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 115.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 115
+.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/ums
+a.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 115
+.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/ums
+b.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+
+{c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap
+/pdftex.map}] [2]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2
+90.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/omlcmr.
+fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <11> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 290.
+<C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod.png, id=85, 469
+.755pt x 289.08pt>
+File: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod.png Graphi
+c file (type png)
+<use C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod.png>
+Package pdftex.def Info: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRi
+skPeriod.png  used on input line 302.
+(pdftex.def)             Requested size: 408.0pt x 251.0785pt.
+<C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod_Qmonth.png, id=
+86, 469.755pt x 289.08pt>
+File: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod_Qmonth.png
+ Graphic file (type png)
+<use C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod_Qmonth.png>
+
+Package pdftex.def Info: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRi
+skPeriod_Qmonth.png  used on input line 306.
+(pdftex.def)             Requested size: 408.0pt x 251.0785pt.
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.308 
+       <c:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod.png>]
+<C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chl_region.png, id=104, 469.755
+pt x 289.08pt>
+File: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chl_region.png Graphic fil
+e (type png)
+<use C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chl_region.png>
+Package pdftex.def Info: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chl_reg
+ion.png  used on input line 330.
+(pdftex.def)             Requested size: 408.0pt x 251.0785pt.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.332 
+       <c:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRiskPeriod_Qmonth.p
+ng (PNG copy)>]
+<C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chla_CCF.png, id=113, 289.08pt 
+x 252.945pt>
+File: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chla_CCF.png Graphic file 
+(type png)
+<use C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chla_CCF.png>
+Package pdftex.def Info: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chla_CC
+F.png  used on input line 335.
+(pdftex.def)             Requested size: 285.59875pt x 249.9107pt.
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.402 \end{longtable}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.402 \end{longtable}
+                      <c:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chl_regio
+n.png> <c:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chla_CCF.png>]
+<C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/logisticmod_CREChla.png, id=120
+, 361.35pt x 252.945pt>
+File: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/logisticmod_CREChla.png Gr
+aphic file (type png)
+<use C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/logisticmod_CREChla.png>
+Package pdftex.def Info: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/logisti
+cmod_CREChla.png  used on input line 405.
+(pdftex.def)             Requested size: 408.0pt x 285.60066pt.
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.408 \newpage
+               <c:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/logisticmod_CREC
+hla.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 413.
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <11> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 415.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/it' in size <11> not available
+(Font)              Font shape `OT1/cmtt/m/it' tried instead on input line 415.
+
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
+430.
+(c:/Program Files/R/R-4.0.4/share/texmf/tex/latex/omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <11> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 430.
+LaTeX Font Info:    Trying to load font information for OML+cmtt on input line 
+448.
+LaTeX Font Info:    No file OMLcmtt.fd. on input line 448.
+
+LaTeX Font Warning: Font shape `OML/cmtt/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textless' on input line 448.
+
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+453.
+
+(c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1cmtt
+.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+
+Underfull \vbox (badness 10000) detected at line 583
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+[7]
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+
+Underfull \vbox (badness 10000) detected at line 583
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 583
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+[8]
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+
+Underfull \vbox (badness 10000) detected at line 583
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 583
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+[9]
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+
+Package xcolor Warning: Incompatible color definition on input line 583.
+
+[10]
+<C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/MonitoringMap.png, id=149, 469.
+755pt x 252.945pt>
+File: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/MonitoringMap.png Graphic 
+file (type png)
+<use C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/MonitoringMap.png>
+Package pdftex.def Info: C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Monitor
+ingMap.png  used on input line 590.
+(pdftex.def)             Requested size: 448.80249pt x 241.66269pt.
+
+Overfull \hbox (40.80249pt too wide) in paragraph at lines 590--591
+ [][] 
+ []
+
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.B.1
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.597 \newpage
+               <c:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/MonitoringMap.pn
+g (PNG copy)>] (./Julian_D_LOSOM_CREBloomEval.bbl) [12] (./Julian_D_LOSOM_CREBl
+oomEval.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `Julian_D_LOSOM_CREBloomEval.out' has not cha
+nged.
+(rerunfilecheck)             Checksum: 57DACC28C9DA25B577BAA6569220F490;723.
+ ) 
+Here is how much of TeX's memory you used:
+ 13049 strings out of 480517
+ 196642 string characters out of 5898071
+ 538034 words of memory out of 5000000
+ 30411 multiletter control sequences out of 15000+600000
+ 417073 words of font info for 82 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 87i,9n,94p,1020b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/tcit1095.600pk> <c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-var
+/fonts/pk/ljfour/jknappen/ec/tctt1095.600pk> <c:/Users/Paul Julian/AppData/Roam
+ing/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk><c:/Users/Paul
+ Julian/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Users/Paul Julian/AppData/Roam
+ing/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/Users/Paul 
+Julian/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti
+10.pfb><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmitt10.pfb><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/Paul Julian/AppData/R
+oaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Users/Pa
+ul Julian/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/Paul Julian/AppData/Roami
+ng/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/Paul Ju
+lian/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb><c:/Users/Paul Julian/AppData/Roaming/T
+inyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/Users/Paul Juli
+an/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt8.pfb><c:/Users/Paul Julian/AppData/Roaming/TinyTeX/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Julian_D_LOSOM_CREBloomEval.pdf (12 pages, 1359644 bytes).
+PDF statistics:
+ 268 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 87 words of extra memory for PDF output out of 10000 (max. 10000000)
+
