@@ -71,7 +71,7 @@ samp.sites%>%
 ## Data Analysis
 
 Daily discharge data were aggregated by month for each discharge location. Basin discharge was estimated by taking the difference from S77 and S79. If the difference between the estuary discharge (S79) and lake (S77) were less than zero then basin discharge was set to zero. Lake discharges to the estuary were determined based on the relative discharge volumes of S77 and S79. If S77 discharges were greater than S79 for any given month it was assumed that the discharge volume at S79 was from the lake (i.e. no basin flow), otherwise, the observed discharge volumes for S77 were characterized as lake water.  Monthly discharge volumes were compared between high (June – August) and low (September – May) algal bloom risk periods for S77 and S79 using the Kruskal-Wallis rank-sum test. The algal bloom risk periods were based on analyses by Walker (2020), where generally chlorophyll-a concentrations and therefore algal bloom potential are greatest during May through August period. The period was adjusted for the CRE as May is typically the driest month and discharges during this period do not reflect a high risk of algal transport to the estuary. 
-Monthly mean chlorophyll-a data were estimated for each region (i.e. CRE and Littoral West), for Lake Okeechobee Littoral West all sites were average together for any given month. Monthly mean chlorophyll-a concentrations were compared between regions using Kruskal-Wallis rank-sum test. Cross-correlation function estimation was used to evaluate potential lagged correlations between Lake Okeechobee (littoral west) and S-79 (CRE) chlorophyll concentrations where CRE chlorophyll values remained fixed and Lake Okeechobee chlorophyll values were lagged. Logistic regression was used to evaluate the potential of bloom formation relative to Lake discharges. Potential algal blooms at S79 were identified if monthly mean chlorophyll-a concentrations were greater than 20 $\mu$g L$^{-1}$.
+Monthly mean chlorophyll-a data were estimated for each region (i.e. CRE and Littoral West), for Lake Okeechobee Littoral West all sites were average together for any given month. Monthly mean chlorophyll-a concentrations were compared between regions using Kruskal-Wallis rank-sum test. Cross-correlation function estimation was used to evaluate potential lagged correlations between Lake Okeechobee (littoral west) and S-79 (CRE) chlorophyll concentrations where CRE chlorophyll values remained fixed and Lake Okeechobee chlorophyll values were lagged. Logistic regression was used to evaluate the potential of bloom occurrence relative to lake discharges. To evaluate the complexity of algal bloom occurrence, two seperate models were evaluated. The first, more simplistic logistic model compared algal bloom occurrence at S79 to lake discharges, meanwhile the second more complex model included water temperature, Lake Okeechobee discharges and C-43 basin discharges. Potential algal blooms at S79 were identified if monthly mean chlorophyll-a concentrations were greater than 20 $\mu$g L$^{-1}$.
 
 All plots were generated in base R and all tables were formatted using “flextable” R-package [@gohel_flextable_2021]. All statistical operations were performed using R (Ver 4.0.4, R Foundation for Statistical Computing, Vienna Austria).  Unless otherwise stated, all statistical operations were performed using the base R library. The critical level of significance was set at $\alpha$ = 0.05. All `R` code for the analyses outline above can be found in **Appendix \ref{section:code}** and source files for the analysis and this report have been posted to [https://github.com/SwampThingPaul/LOSOM_AlgalBloom/](https://github.com/SwampThingPaul/LOSOM_AlgalBloom/). 
 
@@ -89,7 +89,7 @@ knitr::include_graphics('C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/BloomRis
 
 Monthly mean chlorophyll-a concentrations were significantly greater for the Littoral West region relative to CRE ($\chi^{2}$ 100, df=1, $\rho$<0.01; Fig \ref{fig:fig3}). However, during the June to August, high bloom period chlorophyll-a concentrations are not significantly different between regions ($\chi^{2}$ 0.4, df=1, $\rho$=0.54; Fig \ref{fig:fig3}). However, the cross-correlation between monthly chlorophyll-a concentration observed at CRE and that of the Littoral West are relatively low with no correlations across the 15 month lag period (Fig \ref{fig:fig4}). To reduce the potential variability in the data, comparison of S79 and S77 chlorophyll concentrations were also conducted with similar results.
 
-The logistic model to evaluate algal bloom potential at S-79 relative to lake discharges indicated a significant decrease in log-odds ratio for algal bloom (i.e. chlorophyll>20 $\mu$g L$^{-1}$) relative to lake discharge (Table \ref{tab:tab2} and Fig \ref{fig:fig5}). However, the model has a low degree of fit (McFadden’s R$^{2}$ 0.07), therefore any algal bloom mitigation strategy developed based on this analysis should be used with caution.
+The logistic model to evaluate algal bloom potential at S-79 relative to lake discharges indicated a significant decrease in log-odds ratio for algal bloom (i.e. chlorophyll>20 $\mu$g L$^{-1}$) as discharges from the lake increases (Table \ref{tab:tab2} and Fig \ref{fig:fig5}). However, the model has a low degree of fit (McFadden’s R$^{2}$ 0.07), therefore any algal bloom mitigation strategy developed based on this analysis should be used with caution. Meanwhile, when water temperature, lake and basin discharges are considered, model fit improves (Table \ref{tab:tab3}) but not to the level to sufficiently predict algal bloom occurrence without a high level of uncertainty. 
 
 ```{r, echo=FALSE,out.width='100%',fig.cap="\\label{fig:fig3} Monthly mean chlorophyll-a concentration between regions for all months (left) and algal bloom period (right)."}
 knitr::include_graphics('C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chl_region.png')
@@ -122,6 +122,7 @@ mod.sum=flextable(data_t, col_keys = c("term", "estimate", "std.error", "statist
     paste("(Dispersion parameter for ", mod$family$family, " family taken to be ", format(sum_obj$dispersion), ")", sep = ""),
     sprintf("Null deviance: %s on %s degrees of freedom", formatC(sum_obj$null.deviance), formatC(sum_obj$df.null)),
     sprintf("Residual deviance: %s on %s degrees of freedom", formatC(sum_obj$deviance), formatC(sum_obj$df.residual)),
+    sprintf("AIC: %s; BIC: %s",formatC(data_g$AIC),formatC(data_g$BIC)),
     sprintf("McFadden's Pseudo R\u00B2: %s",format(round(mcR2,2),nsmall=2))
     # ,{
     #   if (nzchar(mess <- naprint(sum_obj$na.action)))
@@ -136,13 +137,58 @@ mod.sum=flextable(data_t, col_keys = c("term", "estimate", "std.error", "statist
 
 flextable_to_rmd(
 mod.sum%>%
-  set_caption(caption="\\label{tab:tab2}Logistic model summary comparing algal bloom potental to lake discharges.")
+  set_caption(caption="\\label{tab:tab2}Simple logistic model summary comparing algal bloom potental to lake discharges.")
 )
 
 ```
 
 ```{r, echo=FALSE, out.width='100%',fig.cap="\\label{fig:fig5} Algal bloom occurance at S-79 compared to lake discharges with fitted logistic model with 95\\% confidence interval."}
 knitr::include_graphics('C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/logisticmod_CREChla.png')
+```
+
+```{r,include=F}
+mod2=readRDS("C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Export/mod2_glm_C43.rds")
+
+data_t <- broom::tidy(mod2)
+data_g <- broom::glance(mod2)
+sum_obj <- summary(mod2)
+mcR2=as.numeric(pscl::pR2(mod2)[4])
+# data_t$p.value=with(data_t,ifelse(p.value<0.01,"<0.01",ifelse(p.value<0.05,"< 0.05",format(round(p.value,2),nsmall=2))))
+
+```
+
+```{r,echo=F,warning=F,message=F,results='asis'}
+mod.sum=flextable(data_t, col_keys = c("term", "estimate", "std.error", "statistic", "p.value"))%>%
+  colformat_double(j = c("estimate", "std.error", "statistic"), digits = 3)%>%
+  colformat_double(j = c("p.value"), digits = 3)%>%
+  compose(i=2,j=1,value=as_paragraph("Water Temp"))%>%
+  compose(i=3,j=1,value=as_paragraph("Lake Discharge"))%>%
+  compose(i=4,j=1,value=as_paragraph("Basin Discharge"))%>%
+  set_header_labels(term = "", estimate = "Estimate",
+                    std.error = "Standard Error", statistic = "z-value",
+                    p.value = "p-value" )%>%
+  add_footer_lines(values = c(
+    paste("(Dispersion parameter for ", mod$family$family, " family taken to be ", format(sum_obj$dispersion), ")", sep = ""),
+    sprintf("Null deviance: %s on %s degrees of freedom", formatC(sum_obj$null.deviance), formatC(sum_obj$df.null)),
+    sprintf("Residual deviance: %s on %s degrees of freedom", formatC(sum_obj$deviance), formatC(sum_obj$df.residual)),
+    sprintf("AIC: %s; BIC: %s",formatC(data_g$AIC),formatC(data_g$BIC)),
+    sprintf("McFadden's Pseudo R\u00B2: %s",format(round(mcR2,2),nsmall=2))
+    # ,{
+    #   if (nzchar(mess <- naprint(sum_obj$na.action)))
+    #     paste("  (", mess, ")\n", sep = "")
+    #   else character(0)
+    # }
+  ))%>%
+  align(i = 1, align = "right", part = "footer")%>%
+  italic(i = 1, italic = TRUE, part = "footer")%>%
+  hrule(rule = "auto")%>%
+  autofit(part = c("header", "body"))
+
+flextable_to_rmd(
+mod.sum%>%
+  set_caption(caption="\\label{tab:tab3}Logistic model summary comparing algal bloom potental to water temperature, C-43 basin and lake discharges.")
+)
+
 ```
 
 \newpage
@@ -212,8 +258,8 @@ kruskal.test(S79~Period,q.cre.dat.xtab.mon)
 
 # WQ Data -------------------------------------------------------------
 
-params=data.frame(Test.Number=c(61,179),
-                  param=c("Chla","Chla"))
+params=data.frame(Test.Number=c(61,179,7),
+                  param=c("Chla","Chla","Temp"))
 
 wq.sites=data.frame(Station.ID=
                       c("S79","CES01","S77",
@@ -282,6 +328,7 @@ ccf.chla.rslt
 
 
 ## Logistic Regression
+# Simple Model
 # data prep
 bloom.region.xtab=dcast(Chla.region,monCY~Region,
                         value.var = "bloom",
@@ -319,6 +366,36 @@ prop.table(table(bloom.region.xtab2$CRE,
                          data.frame(Lake=bloom.region.xtab2$Lake),
                          type="response")>0.5))
 
+# Multi-parameter Model
+# Data prep
+Chla.region2=ddply(wq.dat.xtab,c("monCY","month","Region"),
+                   summarise,
+                   Chla=mean(Chla,na.rm=T),
+                   Temp=mean(Temp,na.rm=T))
+Chla.region2$bloom=ifelse(Chla.region2$Chla>20,1,0)
+
+bloom.region.xtab2=merge(subset(Chla.region2,Region=="CRE"),
+                         q.cre.dat.xtab.mon,c("monCY","month"))
+
+# Data Explore
+plot(bloom~Temp,bloom.region.xtab2)
+plot(bloom~Lake,bloom.region.xtab2)
+plot(bloom~C43,bloom.region.xtab2)
+
+mod2=glm(bloom~Temp+Lake+C43,bloom.region.xtab2,family="binomial")
+summary(mod2)
+confint(mod2)
+
+# diagonistics
+plot(1:length(rstandard(mod2)),rstandard(mod2))
+plot(mod2,which=4,id.n=5);#identify the top five largest values
+
+# McFadden's r2
+glm.null.loglike=logLik(glm(bloom~1,
+                            bloom.region.xtab2,
+                            family="binomial"))[1]
+mcR2=1-logLik(mod2)[1]/glm.null.loglike
+mcR2
 ```
 
 \newpage

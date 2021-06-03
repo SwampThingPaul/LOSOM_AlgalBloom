@@ -266,10 +266,14 @@ estimation was used to evaluate potential lagged correlations between
 Lake Okeechobee (littoral west) and S-79 (CRE) chlorophyll
 concentrations where CRE chlorophyll values remained fixed and Lake
 Okeechobee chlorophyll values were lagged. Logistic regression was used
-to evaluate the potential of bloom formation relative to Lake
-discharges. Potential algal blooms at S79 were identified if monthly
-mean chlorophyll-a concentrations were greater than 20 \(\mu\)g
-L\(^{-1}\).
+to evaluate the potential of bloom occurrence relative to lake
+discharges. To evaluate the complexity of algal bloom occurrence, two
+seperate models were evaluated. The first, more simplistic logistic
+model compared algal bloom occurrence at S79 to lake discharges,
+meanwhile the second more complex model included water temperature, Lake
+Okeechobee discharges and C-43 basin discharges. Potential algal blooms
+at S79 were identified if monthly mean chlorophyll-a concentrations were
+greater than 20 \(\mu\)g L\(^{-1}\).
 
 All plots were generated in base R and all tables were formatted using
 ``flextable'' R-package \citep{gohel_flextable_2021}. All statistical
@@ -320,11 +324,14 @@ concentrations were also conducted with similar results.
 
 The logistic model to evaluate algal bloom potential at S-79 relative to
 lake discharges indicated a significant decrease in log-odds ratio for
-algal bloom (i.e.~chlorophyll\textgreater20 \(\mu\)g L\(^{-1}\))
-relative to lake discharge (Table \ref{tab:tab2} and Fig
+algal bloom (i.e.~chlorophyll\textgreater20 \(\mu\)g L\(^{-1}\)) as
+discharges from the lake increases (Table \ref{tab:tab2} and Fig
 \ref{fig:fig5}). However, the model has a low degree of fit (McFadden's
 R\(^{2}\) 0.07), therefore any algal bloom mitigation strategy developed
-based on this analysis should be used with caution.
+based on this analysis should be used with caution. Meanwhile, when
+water temperature, lake and basin discharges are considered, model fit
+improves (Table \ref{tab:tab3}) but not to the level to sufficiently
+predict algal bloom occurrence without a high level of uncertainty.
 
 \begin{figure}[H]
 \includegraphics[width=1\linewidth]{C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/Chl_region} \caption{\label{fig:fig3} Monthly mean chlorophyll-a concentration between regions for all months (left) and algal bloom period (right).}\label{fig:unnamed-chunk-5}
@@ -347,7 +354,7 @@ based on this analysis should be used with caution.
 
 \begin{longtable}[c]{|p{1.35in}|p{0.88in}|p{1.29in}|p{0.78in}|p{0.79in}}
 
-\caption{\label{tab:tab2}Logistic model summary comparing algal bloom potental to lake discharges.}\\
+\caption{\label{tab:tab2}Simple logistic model summary comparing algal bloom potental to lake discharges.}\\
 
 \hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
 
@@ -383,6 +390,12 @@ based on this analysis should be used with caution.
 
 
 
+\multicolumn{5}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.08in+8\tabcolsep+4\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{AIC: 175; BIC: 181.6}}} \\
+
+
+
+
+
 \multicolumn{5}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.08in+8\tabcolsep+4\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{McFadden's Pseudo R²: 0.07}}} \\
 
 \endfoot
@@ -404,6 +417,86 @@ based on this analysis should be used with caution.
 \begin{figure}[H]
 \includegraphics[width=1\linewidth]{C:/Julian_LaCie/_GitHub/LOSOM_AlgalBloom/Plots/logisticmod_CREChla} \caption{\label{fig:fig5} Algal bloom occurance at S-79 compared to lake discharges with fitted logistic model with 95\% confidence interval.}\label{fig:unnamed-chunk-9}
 \end{figure}
+
+\providecommand{\docline}[3]{\noalign{\global\setlength{\arrayrulewidth}{#1}}\arrayrulecolor[HTML]{#2}\cline{#3}}
+
+\setlength{\tabcolsep}{2pt}
+
+\renewcommand*{\arraystretch}{1.5}
+
+\begin{longtable}[c]{|p{1.40in}|p{0.88in}|p{1.29in}|p{0.78in}|p{0.79in}}
+
+\caption{\label{tab:tab3}Logistic model summary comparing algal bloom potental to water temperature, C-43 basin and lake discharges.}\\
+
+\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Estimate}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Standard Error}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{z-value}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.79in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{p-value}}} \\
+
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-5}
+
+\endfirsthead
+
+\hhline{>{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}->{\arrayrulecolor[HTML]{666666}\global\arrayrulewidth=2pt}-}
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Estimate}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Standard Error}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{z-value}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.79in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{p-value}}} \\
+
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-5}\endhead
+
+
+
+\multicolumn{5}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedleft}p{\dimexpr 5.13in+8\tabcolsep+4\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\textit{(Dispersion parameter for binomial family taken to be 1)}}}} \\
+
+
+
+
+
+\multicolumn{5}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.13in+8\tabcolsep+4\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Null deviance: 183.1 on 201 degrees of freedom}}} \\
+
+
+
+
+
+\multicolumn{5}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.13in+8\tabcolsep+4\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Residual deviance: 148.2 on 198 degrees of freedom}}} \\
+
+
+
+
+
+\multicolumn{5}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.13in+8\tabcolsep+4\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{AIC: 156.2; BIC: 169.5}}} \\
+
+
+
+
+
+\multicolumn{5}{!{\color[HTML]{FFFFFF}\vrule width 0pt}>{\raggedright}p{\dimexpr 5.13in+8\tabcolsep+4\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{McFadden's Pseudo R²: 0.19}}} \\
+
+\endfoot
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{(Intercept)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-9.625}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{2.175}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-4.424}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.79in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{0.000}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Water Temp}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{0.326}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{0.080}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{4.088}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.79in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{0.000}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Lake Discharge}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-7.384}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{3.884}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-1.901}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.79in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{0.057}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Basin Discharge}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.88in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-4.941}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 1.29in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{2.681}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.78in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{-1.843}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.79in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{0.065}}} \\
+
+\noalign{\global\setlength{\arrayrulewidth}{2pt}}\arrayrulecolor[HTML]{666666}\cline{1-5}
+
+\end{longtable}
 
 \newpage
 \appendix
@@ -473,8 +566,8 @@ based on this analysis should be used with caution.
 
 \CommentTok{\# WQ Data {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
 
-\NormalTok{params}\OtherTok{=}\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{Test.Number=}\FunctionTok{c}\NormalTok{(}\DecValTok{61}\NormalTok{,}\DecValTok{179}\NormalTok{),}
-                  \AttributeTok{param=}\FunctionTok{c}\NormalTok{(}\StringTok{"Chla"}\NormalTok{,}\StringTok{"Chla"}\NormalTok{))}
+\NormalTok{params}\OtherTok{=}\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{Test.Number=}\FunctionTok{c}\NormalTok{(}\DecValTok{61}\NormalTok{,}\DecValTok{179}\NormalTok{,}\DecValTok{7}\NormalTok{),}
+                  \AttributeTok{param=}\FunctionTok{c}\NormalTok{(}\StringTok{"Chla"}\NormalTok{,}\StringTok{"Chla"}\NormalTok{,}\StringTok{"Temp"}\NormalTok{))}
 
 \NormalTok{wq.sites}\OtherTok{=}\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{Station.ID=}
                       \FunctionTok{c}\NormalTok{(}\StringTok{"S79"}\NormalTok{,}\StringTok{"CES01"}\NormalTok{,}\StringTok{"S77"}\NormalTok{,}
@@ -543,6 +636,7 @@ based on this analysis should be used with caution.
 
 
 \DocumentationTok{\#\# Logistic Regression}
+\CommentTok{\# Simple Model}
 \CommentTok{\# data prep}
 \NormalTok{bloom.region.xtab}\OtherTok{=}\FunctionTok{dcast}\NormalTok{(Chla.region,monCY}\SpecialCharTok{\textasciitilde{}}\NormalTok{Region,}
                         \AttributeTok{value.var =} \StringTok{"bloom"}\NormalTok{,}
@@ -579,6 +673,37 @@ based on this analysis should be used with caution.
                  \FunctionTok{predict}\NormalTok{(mod,}
                          \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{Lake=}\NormalTok{bloom.region.xtab2}\SpecialCharTok{$}\NormalTok{Lake),}
                          \AttributeTok{type=}\StringTok{"response"}\NormalTok{)}\SpecialCharTok{\textgreater{}}\FloatTok{0.5}\NormalTok{))}
+
+\CommentTok{\# Multi{-}parameter Model}
+\CommentTok{\# Data prep}
+\NormalTok{Chla.region2}\OtherTok{=}\FunctionTok{ddply}\NormalTok{(wq.dat.xtab,}\FunctionTok{c}\NormalTok{(}\StringTok{"monCY"}\NormalTok{,}\StringTok{"month"}\NormalTok{,}\StringTok{"Region"}\NormalTok{),}
+\NormalTok{                   summarise,}
+                   \AttributeTok{Chla=}\FunctionTok{mean}\NormalTok{(Chla,}\AttributeTok{na.rm=}\NormalTok{T),}
+                   \AttributeTok{Temp=}\FunctionTok{mean}\NormalTok{(Temp,}\AttributeTok{na.rm=}\NormalTok{T))}
+\NormalTok{Chla.region2}\SpecialCharTok{$}\NormalTok{bloom}\OtherTok{=}\FunctionTok{ifelse}\NormalTok{(Chla.region2}\SpecialCharTok{$}\NormalTok{Chla}\SpecialCharTok{\textgreater{}}\DecValTok{20}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{)}
+
+\NormalTok{bloom.region.xtab2}\OtherTok{=}\FunctionTok{merge}\NormalTok{(}\FunctionTok{subset}\NormalTok{(Chla.region2,Region}\SpecialCharTok{==}\StringTok{"CRE"}\NormalTok{),}
+\NormalTok{                         q.cre.dat.xtab.mon,}\FunctionTok{c}\NormalTok{(}\StringTok{"monCY"}\NormalTok{,}\StringTok{"month"}\NormalTok{))}
+
+\CommentTok{\# Data Explore}
+\FunctionTok{plot}\NormalTok{(bloom}\SpecialCharTok{\textasciitilde{}}\NormalTok{Temp,bloom.region.xtab2)}
+\FunctionTok{plot}\NormalTok{(bloom}\SpecialCharTok{\textasciitilde{}}\NormalTok{Lake,bloom.region.xtab2)}
+\FunctionTok{plot}\NormalTok{(bloom}\SpecialCharTok{\textasciitilde{}}\NormalTok{C43,bloom.region.xtab2)}
+
+\NormalTok{mod2}\OtherTok{=}\FunctionTok{glm}\NormalTok{(bloom}\SpecialCharTok{\textasciitilde{}}\NormalTok{Temp}\SpecialCharTok{+}\NormalTok{Lake}\SpecialCharTok{+}\NormalTok{C43,bloom.region.xtab2,}\AttributeTok{family=}\StringTok{"binomial"}\NormalTok{)}
+\FunctionTok{summary}\NormalTok{(mod2)}
+\FunctionTok{confint}\NormalTok{(mod2)}
+
+\CommentTok{\# diagonistics}
+\FunctionTok{plot}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(}\FunctionTok{rstandard}\NormalTok{(mod2)),}\FunctionTok{rstandard}\NormalTok{(mod2))}
+\FunctionTok{plot}\NormalTok{(mod2,}\AttributeTok{which=}\DecValTok{4}\NormalTok{,}\AttributeTok{id.n=}\DecValTok{5}\NormalTok{);}\CommentTok{\#identify the top five largest values}
+
+\CommentTok{\# McFadden\textquotesingle{}s r2}
+\NormalTok{glm.null.loglike}\OtherTok{=}\FunctionTok{logLik}\NormalTok{(}\FunctionTok{glm}\NormalTok{(bloom}\SpecialCharTok{\textasciitilde{}}\DecValTok{1}\NormalTok{,}
+\NormalTok{                            bloom.region.xtab2,}
+                            \AttributeTok{family=}\StringTok{"binomial"}\NormalTok{))[}\DecValTok{1}\NormalTok{]}
+\NormalTok{mcR2}\OtherTok{=}\DecValTok{1}\SpecialCharTok{{-}}\FunctionTok{logLik}\NormalTok{(mod2)[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{/}\NormalTok{glm.null.loglike}
+\NormalTok{mcR2}
 \end{Highlighting}
 \end{Shaded}
 
@@ -591,7 +716,7 @@ based on this analysis should be used with caution.
 
 }
 
-\caption{\label{fig:map}Map of monitoring locations presented in Table \ref{tab:tab1}.}\label{fig:unnamed-chunk-11}
+\caption{\label{fig:map}Map of monitoring locations presented in Table \ref{tab:tab1}.}\label{fig:unnamed-chunk-13}
 \end{figure}
 
 \newpage

@@ -406,7 +406,6 @@ mcR2
 
 #classification rate
 prop.table(table(bloom.region.xtab2$CRE,predict(mod,data.frame(Lake=bloom.region.xtab2$Lake),type="response")>0.5))
-# 83% true positives (based on all data)
 
 data_t <- broom::tidy(mod)
 data_g <- broom::glance(mod)
@@ -463,3 +462,35 @@ data.frame(DataType=c(rep("Water Quality",6),rep("Discharge",2)),
   merge_v(1)%>%
   fix_border_issues()%>%
   valign(j=1,valign="top")%>%autofit()
+
+
+## 
+Chla.region2=ddply(wq.dat.xtab,c("monCY","month","Region"),summarise,Chla=mean(Chla,na.rm=T),Temp=mean(Temp,na.rm=T))
+Chla.region2$bloom=ifelse(Chla.region2$Chla>20,1,0)
+
+
+## 
+bloom.region.xtab2=merge(subset(Chla.region2,Region=="CRE"),q.cre.dat.xtab.mon,c("monCY","month"))
+head(bloom.region.xtab2)
+
+plot(bloom~Temp,bloom.region.xtab2)
+plot(bloom~Lake,bloom.region.xtab2)
+plot(bloom~C43,bloom.region.xtab2)
+
+
+mod2=glm(bloom~Temp+Lake+C43,bloom.region.xtab2,family="binomial")
+summary(mod2)
+confint(mod2)
+pscl::pR2(mod2)
+
+# diagonistics
+plot(1:length(rstandard(mod2)),rstandard(mod2))
+plot(mod2,which=4,id.n=5);#identify the top five largest values
+
+#classification rate
+prop.table(table(bloom.region.xtab2$bloom,predict(mod2,bloom.region.xtab2,type="response")>0.5))
+
+
+
+# saveRDS(mod2,paste0(export.path,"mod2_glm_C43.rds"))
+# mod2=readRDS(paste0(export.path,"glm_C43.rds"))
